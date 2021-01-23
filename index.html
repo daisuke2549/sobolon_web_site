@@ -21,7 +21,7 @@
     <script src = "/js/wow.min.js" ></script>
     <link rel = "stylesheet" href = "/css/animate.css">
     <!-- original -->
-    <link rel = "stylesheet" href = "/css/style.css">
+    <link rel = "stylesheet" href = "./css/style.css">
     <script src = "/js/script.js" ></script>
 </head>
 <body class= "drawer drawer--right">  
@@ -59,11 +59,11 @@
        <div class="top-picture"></div>
        <div class="top-message">
            <p class="top-message-title">“可愛い” で<br class="is-pc"> 地球を守る！</p>
-           <p class="top-message-text">海洋マイクロプラスチックを素材とした ハンドメイドアクセサリー「sobolon」</p>
+           <p class="top-message-text">海洋マイクロプラスチックを素材とした<br> ハンドメイドアクセサリー「sobolon」</p>
        </div>
    </div>
 <!-- /top -->
-  <section  id = "concept" class="concept inner">
+  <section  id = "concept" class="concept inner section">
       <h2 class="util-title">Concept</h2>
       <div class="concept-inner">
           <div class="concept-picture"><img src="./img/concept-1.png" alt="concept"></div>
@@ -75,7 +75,7 @@
 
   </section>
 <!-- /concept -->
-  <section id = "feature" class="feature inner">
+  <section id = "feature" class="feature inner section">
     <h2 class="util-title">Feature</h2>
       <ul class="feature-list">
           <li class="feature-item">
@@ -104,7 +104,7 @@
           </li>
       </ul>
   </section>
-  <div id = "about"  class="about inner">
+  <div id = "about"  class="about inner section">
       <div class="about-inner inner">
          <p class="about-title">消費者である私たちが、<br> 地球環境のためにできることは何か？</p>
          <p class="about-text">そんな視点からこのブランドは生まれました。<br> オシャレを楽しむ気持ちを大切にしながらも、<br class ="is-pc"> ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら…<br>
@@ -113,7 +113,7 @@
   </div>
  <!-- /about -->
   
-  <section id = "products" class="products inner">
+  <section id = "products" class="products inner section">
     <h2 class="util-title">Products</h2>
       <ul class="products-list">
           <li class="products-item">
@@ -127,7 +127,7 @@
           </li>
           <li class="products-item">
             <a href="#" class="products-item-link">
-                <div class="products-item-picture"><img src="./img/news-2.png" alt=""></div>
+                <div class="products-item-picture"><img src="./img/product-2.png" alt=""></div>
                 <div class="products-item-body">
                     <p class="products-item-title">【しかく指輪】海洋マイクロプラスチックを使ったハンドメイドアクセサリー/ゆびわ(全7色)</p>
                     <p class="products-item-cost">￥2,390</p>
@@ -149,7 +149,7 @@
       </div>
   </section>
  <!-- /products -->
-  <section  id ="news" class="news inner">
+  <section  id ="news" class="news inner section">
     <h2 class="util-title">News</h2>
       <div class="news-list">
           <article class="news-item">
@@ -188,9 +188,9 @@
                 </div>
             </a>
         </article>
-        <dvi class="news-footer">
+        <div class="news-footer">
             <a href="#" class="util-link">MORE</a>
-        </dvi>
+        </div>
      </div>
   </section>
 <!-- /news --> 
@@ -199,19 +199,19 @@
         <div class="concept2-picture"><img src="./img/concept-2.png" alt="concept"></div>
         <div class="concept2-message">
             <p class="concept2-message-title">合言葉は、<br> 「 “可愛い” で 地球を守る！」</p>
-            <p class="concept2-message-text">「深刻化している環境問題に対して、否定や制限、禁止といった強制的な<br>方法ではなく、明るく幸せな未来を目指して、「可愛い」「楽しい」の<br>力を信じて、愛につながる選択を世の中に増やしていきます。</p>
+            <p class="concept2-message-text">「深刻化している環境問題に対して、否定や制限、禁止といった強制的な方法ではなく、明るく幸せな未来を目指して、「可愛い」「楽しい」の力を信じて、愛につながる選択を世の中に増やしていきます。</p>
         </div>
     </div>
    </div>
 <!-- /concept2 -->
-   <section id ="contact" class="contact inner">
-       <h2 class="utile-title"><span class="contact-text-inline">＊</span>Contact</h2>
+   <section id ="contact" class="contact inner ">
+       <h2 class="util-title">Contact</h2>
        <form action="" class="contact-form" method = "post">
-       <p class="contact-text">は入力必須項目です</p>
+       <p class="contact-text"><span class="contact-text-inline">＊</span>は入力必須項目です</p>
         <dl class="contact-list">
             <div class="contact-item">
                 <dt class="contact-item-title">
-                    お名前<span class="contact-item-inline">＊</span>
+                    お名前<span class="contact-item-title-inline">＊</span>
                 </dt>
             <dd class="contact-item-input">
                 <input type="text" name="" required>
@@ -219,7 +219,7 @@
             </div>
             <div class="contact-item">
                 <dt class="contact-item-title">
-                    メールアドレス<span class="contact-item-inline">＊</span>
+                    メールアドレス<span class="contact-item-title-inline">＊</span>
                 </dt>
             <dd class="contact-item-input">
                 <input type="email" name="" required>
@@ -227,16 +227,16 @@
             </div>
             <div class="contact-item">
                 <dt class="contact-item-title">
-                    法人/個人の選択<span class="contact-item-inline">＊</span>
+                    法人/個人の選択<span class="contact-item-title-inline">＊</span>
                 </dt>
             <dd class="contact-item-input">
                 <div class="contact-radio-wrap">
                     <label class="contact-radio">
-                        <input type="radio" name="" required>
+                        <input type="radio" name=""  class = "contact-radio-input" required checked>
                         <span class="contact-radio-part">法人</span>
                     </label>
                     <label class="contact-radio">
-                        <input type="radio" name="" required>
+                        <input type="radio" name="" class = "contact-radio-input" required>
                         <span class="contact-radio-part">個人</span>
                     </label>
                 </div>
@@ -244,7 +244,7 @@
             </div>
             <div class="contact-item">
                 <dt class="contact-item-title">
-                    お問い合わせ内容<span class="contact-item-inline">＊</span>
+                    お問い合わせ内容<span class="contact-item-title-inline">＊</span>
                 </dt>
             <dd class="contact-item-input">
                 <textarea name="" required></textarea>
@@ -254,13 +254,13 @@
         <div class="contact-footer">
             <p class="contact-fotter-text">
                 <label class="contact-privacy">
-                    <input type="checkbox" name="" required>
+                    <input type="checkbox" class = "contact-privacy-input" name="" required>
                      <span class="contact-privacy-part"></span>
                 </label>
                 <a href="#" class="contact-privacy-link" target="_blank">プライバシーポリシー</a>に同意します。
             </p>
             <div class="contact-footer-submit">
-                <button class="util-link -submit" type="submit" ></button>
+                <button class="util-link -submit" type="submit">送信</button>
             </div>
         </div>
       </form>
@@ -269,18 +269,6 @@
 
 </main>
  <!-- main -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
