@@ -33,7 +33,7 @@ $font-color:#333;
 # common - 全体に共通するスタイル
 =====================================================*/
 @include mq(sm){
-    .is-sp{
+    .is-pc{
         display:none;
     }
 }
@@ -63,11 +63,14 @@ img{
     margin:0 auto;
     padding:0 40px;
     box-sizing: content-box;
+    @include mq(sm){
+        padding:0 15px;
+    }
+    
 
 }
 
 /* header
-
 --------------------------------------------------------*/
 .header{
     background:#fff;
@@ -78,9 +81,39 @@ img{
     z-index:100;
 }
 
+
+.drawer-hamburger{
+    .drawer--right  &{
+     right:3px;
+    } 
+}
+
+
+
+
+.drawer-hamburger-icon{
+    background-color:$primary-color;
+     
+    .drawer-open & {
+        background-color:transparent;
+    }
+    
+    
+    .drawer-hamburger-icon
+
+    &::before,
+    &::after{
+            background-color:$primary-color;
+    }
+}
+
+
 .header-inner{
     display: flex;
     align-items: center;
+    @include mq(sm){
+       height:60px;
+    }
 }
 
 .header-logo{
@@ -90,6 +123,11 @@ img{
 
 .header-nav{
     margin-left: auto;
+    @include mq(sm){
+     top:60px;
+     background-color:$primary-color;
+}
+
 }
 .header-nav-list{
     display: flex;
@@ -116,16 +154,34 @@ img{
 ------------------------------------------------------*/
 .footer{
     background: #F7F7F7;
+
+    @include mq(sm){
+     padding:36px 0 14px;
+    }
+    
+
 }
 .footer-logo{
     width:120px;
+    top: 48px;
+    position: relative;
     margin: 0 auto;
 }
 
 .footer-nav-list{
-    display: flex;
-    justify-content: center;
+
+    top: 38px;
+    position: relative;
     margin-top: 8px;
+    @include mq(md){
+        display: flex;
+        justify-content: center;
+    }
+    @include mq(sm){
+      text-align: center;
+      margin-top: 16px;
+    }
+    
 }
 
 .footer-nav-item-link{
@@ -133,27 +189,45 @@ img{
    color: $font-color;
    display: block !important;
    padding: 1em 0;
+
+    @include mq(sm){
+       padding: .3em 0;
+    }
 }
 .footer-nav-item{
     & + &{
         margin-left: 32px;
       }  
+      @include mq(sm){
+        margin-top: 8px;
+      }
 }
 .footer-sns-list{
     display: flex;
     justify-content: center;
     margin-top: 8px;
+    top: 38px;
+    position: relative;
+
+    
 }
 
 .footer-sns-item{
     & + &{
         margin-left: 32px;
       }  
+      @include mq(sm){
+        margin-left: 32px;
+    }
 }
 .footer-copyright{
     text-align: center;
     font-size:12px;
     padding: 42px 40px 12px;
+    @include mq(sm){
+    margin-top: 5px;
+    }
+    
 }
 
 
@@ -167,17 +241,27 @@ img{
 .main{
     padding-top: 70px;
     color: #888;
+    @include mq(sm){
+      padding-top: 60px;
+    }
 
 }
 
 .section{
     margin-top: 160px;
+    @include mq(md){
+    margin-top: 96px;
+    }
 }
 .util-title{
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     line-height: 1;
+
+    @include mq(md){
+      font-size: 40px;
+    }
 
     &::after{
       content: '';
@@ -206,17 +290,30 @@ img{
   position:relative;
 }
 .top-picture{
-    padding-top:55%;
-    background: url(../img/top.png) top right 82.5% no-repeat;
+    @include mq(md){
+        padding-top:55%;
+        background: url(../img/top.png) top right 82.5% no-repeat;
+        margin-left: 150px;
+    }
+    @include mq(sm){
+        padding-top:120%;
+        background: url(../img/sp/top.png) center center / cover;
+    }
 }
 
 .top-message{
-    position: absolute;
-    left:0;
-    top:50%;
-    transform: translateY(-50%);
-    background: #fff;
-    padding: 82px 44px 98px 40px; 
+    @include mq(sm){
+        margin-top: 31px;
+    }
+    
+    @include mq(md){
+        position: absolute;
+        left:0;
+        top:50%;
+        transform: translateY(-50%);
+        background: #fff;
+        padding: 82px 44px 98px 40px;
+    }
 }
 .top-message-title{
     font-size: 26px;
@@ -232,14 +329,32 @@ img{
 ----------------------------------------------------*/
 .concept-inner{
     margin-top:64px;
-    display: flex;
-    align-items:center;
+    @include mq(md){
+        display: flex;
+        align-items:center;
+    }
+    @include mq(sm){
+       margin-top: 46px;
+    }
+
 }
 .concept-picture{
+    @include mq(md){
+        flex:0 0 50%; 
+    }
+
     flex:0 0 50%; 
+    
 }
 
 .concept-message{
+    @include mq(sm){
+       margin-top: 35px;
+    }
+    @include mq(md){
+        flex:0 1 50%; 
+        margin-left: 6.6667%;
+    }
     flex:0 1 50%; 
     margin-left: 6.6667%;
 }
@@ -251,18 +366,44 @@ img{
 }
 .concept-message-text{
     margin-top: 36px;
+    @include mq(sm){
+      margin-top: 20px;
+    }
 }
 
 
 /* feature
 ----------------------------------------------------*/
+.feature{
+    @include mq(sm){
+      max-width: 340px;
+    }
+    
+}
+
 .feature-list{
-    display: flex;
-    justify-content: space-between;
+    @include mq(sm){
+         margin-top: 46px;
+    } 
+
+    @include mq(md){
+       display: flex;
+       justify-content: space-between;
+    }
+    
     margin-top: 64px;
 }
 .feature-item{
+    @include mq(md){
+      flex:0 0 28.3333%;
+    }
     flex:0 0 28.3333%;
+    & + &{
+    @include mq(sm){
+      margin-top: 49px;
+    }
+
+    }
 
 }
 .feature-item-link{
@@ -281,8 +422,15 @@ img{
 ----------------------------------------------------*/
 .about{
    color:#fff;
-   background: url(../img/bg.png) center center / cover;
     padding:120px 0;
+    @include mq(sm){
+        background: url(../img/sp/bg.png) center center / cover;
+        padding:176px 0 52px;
+    }
+    
+    @include mq(md){
+        background: url(../img/bg.png) center center / cover;
+    }
 
    &::before{
        content:'';
@@ -302,9 +450,17 @@ img{
 .about-title{
     font-size: 22px;
     font-weight: bold;
+    @include mq(sm){
+    font-size: 20px;
+    }
 }
 .about-text{
     margin-top: 28px;
+    @include mq(sm){
+    font-size: 14px;
+    margin-top: 22px;
+    line-height: 1.7143;
+    }
 }
 
 
@@ -312,14 +468,31 @@ img{
 ----------------------------------------------------*/
 .products{
     max-width: 940px;
+    @include mq(sm){
+    max-width: 340px;
+    padding: 0 58px;
+    }
 }
 .products-list{
     margin-top: 64px;
-    display:flex;
-    justify-content: space-between;
+    @include mq(sm){
+     margin-top: 48px;
+    }
+    
+
+    @include mq(md){
+        display:flex;
+        justify-content: space-between;
+    }
 }
 .products-item{
-    flex: 0 0 27.6%;
+    @include mq(md){
+        display:flex;
+        justify-content: space-between;
+    }
+    & + &{
+     margin-top: 40px;
+    }
 }
 .products-item-link{
   display: block;
@@ -345,33 +518,58 @@ img{
 ----------------------------------------------------*/
 .news{
     max-width: 1040px;
+    @include mq(sm){
+      padding: 0 32px;
+    }
 }
+
+.news-list{
+    @include mq(sm){
+      margin-top: 25px;
+    }
+}
+
 
 .news-item{
     border-bottom: solid 1px #e0e0e0;
 }
 .news-item-link{
-  display: flex;
-  align-items: center;
+  display: block;
   color: $font-color;
   font-size: 14px;
   padding:22px 0; 
+  @include mq(md){
+    display: flex;
+    align-items: center;
+}
 }
 
 .news-item-header{
-    flex:0 0 260px;
-
+    @include mq(md){
+        flex:0 0 260px;
+    }
 }
 
 .news-item-body{
-    flex:0 1 100%;
-    margin-left: 40px;
+    @include mq(sm){
+     margin-top: 21px;
+    }
+    
+    @include mq(md){
+        flex:0 1 100%;
+        margin-left: 40px;
+    }
+
 }
 
 .news-item-title{
     font-size: 18px;
     margin-top: 4px;
     font-weight: bold;
+    @include mq(sm){
+     font-size:16px;
+    }
+    
 }
 .news-item-text{
     font-size: 14px;
@@ -391,28 +589,49 @@ img{
 /* concept2
 ----------------------------------------------------*/
 .concept2-inner{
+    @include mq(md){
+        display: flex;
+        align-items:center;
+        flex-direction: row-reverse;
+    }
     margin-top:64px;
-    display: flex;
-    align-items:center;
-    flex-direction: row-reverse;
+
 }
 .concept2-picture{
-    flex:0 0 50%; 
+    @include mq(md){
+    
+        flex:0 0 50%; 
+    }
+
 }
 
 .concept2-message{
-    flex:0 1 50%; 
-    margin-right: 6.6667%;
+    @include mq(sm){
+    margin-top: 34px;
+    }
+    @include mq(md){
+        flex:0 1 50%; 
+        margin-right: 6.6667%;
+    }
+
 }
 
 
 .concept2-message-title{
     font-size: 28px;
     font-weight: bold;
+    @include mq(sm){
+     font-size: 20px;
+    }
+    
 }
 .concept2-message-text{
     margin-top: 30px;
     font-size: 16px;
+    @include mq(sm){
+        font-size: 14px;
+        line-height: 1.7143;
+    }
 }
 
 
@@ -422,6 +641,15 @@ img{
     background: url(../img/bg.png) center center / cover;
     margin-top: 225px;
     padding:72px 40px 86px;
+    @include mq(sm){
+    margin-top: 92px;
+    padding: 56px 28px;
+    }
+}
+
+
+
+
  .util-title{
      color:$primary-color;
  }   
@@ -438,17 +666,20 @@ input[type="text"],
 input[type="email"]{
     height:40px;
     width:100%;
+    border:0;
 }
 textarea{
     min-height:122px;
     resize: vertical;
 }
-}
+
 
 
 .contact-form{
     margin-top: 56px;
-
+    @include mq(sm){
+    margin-top: 26px;
+    }
 }
 
 
@@ -468,7 +699,9 @@ textarea{
      margin:18px auto 0;
  }
  .contact-item{   
-    display: flex;
+    @include mq(md){
+        display: flex;
+    }
     & + &{
         margin-top: 32px;
     }
@@ -478,10 +711,14 @@ textarea{
     color:rgba(231, 114, 142, 1);
     vertical-align: super;
     line-height: 1;
+    @include mq(sm){
+     font-size:10px;
+    }
+    
 }
 
 .contact-item-title{   
-    flex:0 1 100%;
+
     background:rgba(62, 161, 209, 0.7) ;
     color:#fff;
     font-size: 18px;
@@ -489,25 +726,42 @@ textarea{
     line-height:40px;
     text-align: center;
     padding-left: 10px;
-
-     &::after{
-        content:'';
-        display: block;
-        position: absolute;
-        top:0;
-        right:-8px;
-        border-style: solid;
-        border-width: 20px 0 20px 8px;
-        border-color: transparent transparent transparent rgba(62, 161, 209, 0.7) ;
-     }
-
-
+    @include mq(md){
+        flex:0 1 100%;
+    }
+    @include mq(md){
+        &::after{
+            content:'';
+            display: block;
+            position: absolute;
+            top:0;
+            right:-8px;
+            border-style: solid;
+            border-width: 20px 0 20px 8px;
+            border-color: transparent transparent transparent rgba(62, 161, 209, 0.7) ;
+         }
+    }
+    @include mq(sm){
+       display: inline-block;
+       font-size: 14px;
+       line-height: 32px;
+       height: 32px;
+       padding:0 16px;
+    }
+    
 }
 
  
  .contact-item-input{   
-     flex:0 0 320px;
-     margin-left: 18px;
+    @include mq(sm){
+     margin-top: 3px;
+    }
+    
+    @include mq(md){
+        flex:0 0 320px;
+        margin-left: 18px;
+    }
+
  }
 
 .contact-radio-wrap{
@@ -551,6 +805,10 @@ textarea{
 
 
  .contact-footer{
+    @include mq(sm){
+    margin-top: 14px;
+    }
+    
      text-align: center;
      margin-top: 20px;
  }
@@ -596,9 +854,10 @@ textarea{
     text-decoration: underline;
 }
 
-
-
-
  .contact-footer-submit{
      margin-top: 46px;
+     @include mq(sm){
+     margin-top: 24px;
+    }
+    
  }
