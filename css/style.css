@@ -59,6 +59,23 @@ img {
   z-index: 100;
 }
 
+.drawer--right .drawer-hamburger {
+  right: 3px;
+}
+
+.drawer-hamburger-icon {
+  background-color: #3EA1D1;
+}
+
+.drawer-open .drawer-hamburger-icon {
+  background-color: transparent;
+}
+
+.drawer-hamburger-icon
+.drawer-hamburger-icon::before, .drawer-hamburger-icon::after {
+  background-color: #3EA1D1;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -78,12 +95,24 @@ img {
   margin-left: auto;
 }
 
-.header-nav-list {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .header-nav {
+    top: 60px;
+    background-color: #3EA1D1;
+    padding: 24px 0;
+  }
 }
 
-.header-nav-item + .header-nav-item {
-  margin-left: 46px;
+@media screen and (min-width: 768px) {
+  .header-nav-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav-item + .header-nav-item {
+    margin-left: 46px;
+  }
 }
 
 .header-nav-item-link {
@@ -92,6 +121,26 @@ img {
   height: 70px;
   line-height: 70px;
   letter-spacing: .1em;
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav-item-link {
+    color: #fff;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 768px) {
+  .header-nav-item-link {
+    transition: color .4s;
+  }
+  .header-nav-item-link:hover {
+    color: #3EA1D1;
+  }
 }
 
 /*footer
@@ -146,6 +195,15 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer-nav-item-link {
+    transition: opacity .4s;
+  }
+  .footer-nav-item-link:hover {
+    opacity: .7;
+  }
+}
+
 .footer-nav-item + .footer-nav-item {
   margin-left: 32px;
 }
@@ -162,6 +220,22 @@ img {
   margin-top: 8px;
   top: 38px;
   position: relative;
+}
+
+.footer-sns-item-link {
+  color: #3EA1D1;
+  font-size: 24px;
+  display: block;
+  padding: .1em .5em;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-sns-item-link {
+    transition: opacity .4s;
+  }
+  .footer-sns-item-link:hover {
+    opacity: .7;
+  }
 }
 
 .footer-sns-item + .footer-sns-item {
@@ -242,6 +316,19 @@ img {
   background: #fff;
   display: inline-block;
   padding: 10px 54px;
+  transition: background-color .4s, color .4s;
+}
+
+.util-link.-active {
+  background: #3EA1D1;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .util-link:not(.-submit):hover {
+    background-color: #3EA1D1;
+    color: #fff;
+  }
 }
 
 /* top
@@ -401,6 +488,20 @@ img {
   box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
 }
 
+@media screen and (min-width: 768px) {
+  .feature-item-link:hover .feature-item-picture > img {
+    transform: scale(1.05);
+  }
+}
+
+.feature-item-picture {
+  overflow: hidden;
+}
+
+.feature-item-picture > img {
+  transition: transform .4s;
+}
+
 .feature-item-body {
   font-weight: bold;
   text-align: center;
@@ -512,6 +613,20 @@ img {
   font-size: 14px;
 }
 
+@media screen and (min-width: 768px) {
+  .products-item-link:hover .product-item-picture > img {
+    transform: scale(1.05);
+  }
+}
+
+.products-item-picture {
+  overflow: hidden;
+}
+
+.products-item-picture > img {
+  transition: transform .4s;
+}
+
 .products-item-body {
   margin-top: 22px;
 }
@@ -560,12 +675,30 @@ img {
     display: flex;
     align-items: center;
   }
+  .news-item-link:hover .news-item-picture > img {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .news-item-header {
     flex: 0 0 260px;
   }
+}
+
+.news-item-picture {
+  padding-top: 61.5385%;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item-picture > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: transform .4s;
 }
 
 @media screen and (max-width: 767px) {
@@ -841,6 +974,7 @@ textarea {
   line-height: 38px;
   width: 80px;
   text-align: center;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 .contact-footer {
@@ -860,6 +994,7 @@ textarea {
   width: 22px;
   height: 22px;
   vertical-align: middle;
+  transition: all .2s;
 }
 
 .contact-privacy-input {
