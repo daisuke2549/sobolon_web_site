@@ -973,3 +973,15 @@ textarea{
     }
     
  }
+
+ .contact-message{
+     text-align: center;
+     margin-right: 60px;
+     display: none;
+
+     &.-error{
+         color:#f00;
+     }
+
+
+ }

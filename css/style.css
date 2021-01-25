@@ -1036,3 +1036,13 @@ textarea {
     margin-top: 24px;
   }
 }
+
+.contact-message {
+  text-align: center;
+  margin-right: 60px;
+  display: none;
+}
+
+.contact-message.-error {
+  color: #f00;
+}
