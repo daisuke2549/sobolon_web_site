@@ -63,6 +63,20 @@ img {
   right: 3px;
 }
 
+@media screen and (min-width: 768px) {
+  .drawer-toggle {
+    display: none;
+  }
+}
+
+.drawer-toggle .drawer-hamburger-hamburger::before, .drawer-toggle::after {
+  background-color: #3EA1D1;
+}
+
+.drawer-hamburger-icon button {
+  background-color: #3EA1D1;
+}
+
 .drawer-hamburger-icon {
   background-color: #3EA1D1;
 }
@@ -71,8 +85,11 @@ img {
   background-color: transparent;
 }
 
-.drawer-hamburger-icon
-.drawer-hamburger-icon::before, .drawer-hamburger-icon::after {
+.drawer-hamburger-icon::before {
+  background-color: #3EA1D1;
+}
+
+.drawer-hamburger-icon::after {
   background-color: #3EA1D1;
 }
 
@@ -163,6 +180,7 @@ img {
 }
 
 .footer-nav-list {
+  margin: auto;
   top: 38px;
   position: relative;
   margin-top: 8px;
@@ -211,6 +229,7 @@ img {
 @media screen and (max-width: 767px) {
   .footer-nav-item {
     margin-top: 8px;
+    margin-right: 40px;
   }
 }
 
@@ -218,6 +237,7 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 8px;
+  margin-right: 20px;
   top: 38px;
   position: relative;
 }
@@ -244,6 +264,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .footer-sns-item {
+    margin-right: 40px;
     margin-left: 32px;
   }
 }
@@ -258,6 +279,10 @@ img {
   .footer-copyright {
     margin-top: 5px;
   }
+}
+
+.footer-copyright:hover {
+  color: #FF0000;
 }
 
 /*=====================================================
@@ -355,6 +380,7 @@ img {
 @media screen and (max-width: 767px) {
   .top-message {
     margin-top: 31px;
+    margin-left: 10px;
   }
 }
 
@@ -455,6 +481,7 @@ img {
 @media screen and (max-width: 767px) {
   .feature-list {
     margin-top: 46px;
+    margin-right: 35px;
   }
 }
 
@@ -586,6 +613,7 @@ img {
 @media screen and (max-width: 767px) {
   .products-list {
     margin-top: 48px;
+    margin-right: 40px;
   }
 }
 
@@ -603,8 +631,10 @@ img {
   }
 }
 
-.products-item + .products-item {
-  margin-top: 40px;
+@media screen and (min-width: 768px) {
+  .products-item + .products-item {
+    margin-left: 80px;
+  }
 }
 
 .products-item-link {
@@ -818,7 +848,7 @@ img {
 }
 
 textarea {
-  width: 100%;
+  width: 310px;
   border: 0;
   font-size: 16px;
   padding: 2em .5em;
@@ -828,7 +858,7 @@ textarea {
 input[type="text"],
 input[type="email"] {
   height: 40px;
-  width: 100%;
+  width: 320px;
   border: 0;
 }
 
@@ -928,6 +958,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .contact-item-input {
     margin-top: 3px;
+    margin-left: 0px;
   }
 }
 

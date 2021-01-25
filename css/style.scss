@@ -88,7 +88,21 @@ img{
     } 
 }
 
+.drawer-toggle{
+    @include mq(md){
+    display: none;
+    }
+    
+    .drawer-hamburger-hamburger::before,
+    &::after{
+            background-color:$primary-color;
+    }
 
+
+}
+.drawer-hamburger-icon button{
+    background-color:$primary-color;
+}
 
 
 .drawer-hamburger-icon{
@@ -99,9 +113,9 @@ img{
     }
     
     
-    .drawer-hamburger-icon
-
-    &::before,
+    &::before{
+        background-color:$primary-color;
+    }
     &::after{
             background-color:$primary-color;
     }
@@ -187,7 +201,7 @@ img{
 }
 
 .footer-nav-list{
-
+    margin:auto;
     top: 38px;
     position: relative;
     margin-top: 8px;
@@ -210,6 +224,7 @@ img{
 
     @include mq(sm){
        padding: .3em 0;
+  
     }
     @include mq(md){
         transition: opacity .4s;
@@ -224,12 +239,14 @@ img{
       }  
       @include mq(sm){
         margin-top: 8px;
+        margin-right: 40px;
       }
 }
 .footer-sns-list{
     display: flex;
     justify-content: center;
     margin-top: 8px;
+    margin-right: 20px;
     top: 38px;
     position: relative;
 }
@@ -245,6 +262,7 @@ img{
            opacity: .7;
         }
     } 
+
 }
 
 
@@ -254,6 +272,7 @@ img{
         margin-left: 32px;
       }  
       @include mq(sm){
+        margin-right: 40px;
         margin-left: 32px;
     }
 }
@@ -264,9 +283,10 @@ img{
     @include mq(sm){
     margin-top: 5px;
     }
-    
 }
-
+.footer-copyright:hover{
+    color:#FF0000;
+}
 
 
 
@@ -358,6 +378,7 @@ img{
 .top-message{
     @include mq(sm){
         margin-top: 31px;
+        margin-left: 10px;
     }
     
     @include mq(md){
@@ -438,6 +459,7 @@ img{
 .feature-list{
     @include mq(sm){
          margin-top: 46px;
+         margin-right: 35px;
     } 
 
     @include mq(md){
@@ -455,6 +477,7 @@ img{
     & + &{
     @include mq(sm){
       margin-top: 49px;
+
     }
 
     }
@@ -472,6 +495,7 @@ img{
           transform: scale(1.05);
        }
     }
+  
 }
 }
 
@@ -548,9 +572,8 @@ img{
     margin-top: 64px;
     @include mq(sm){
      margin-top: 48px;
+     margin-right: 40px;
     }
-    
-
     @include mq(md){
         display:flex;
         justify-content: space-between;
@@ -560,10 +583,14 @@ img{
     @include mq(md){
         display:flex;
         justify-content: space-between;
+        
     }
+    @include mq(md){
     & + &{
-     margin-top: 40px;
+      margin-left: 80px;
     }
+            
+}
 }
 .products-item-link{
   display: block;
@@ -767,7 +794,7 @@ img{
   
 
 textarea{
-    width:100%;
+    width:310px;
     border:0;
     font-size: 16px;
     padding: 2em .5em;
@@ -776,8 +803,9 @@ textarea{
 input[type="text"],
 input[type="email"]{
     height:40px;
-    width:100%;
+    width:320px;
     border:0;
+
 }
 textarea{
     min-height:122px;
@@ -829,7 +857,6 @@ textarea{
 }
 
 .contact-item-title{   
-
     background:rgba(62, 161, 209, 0.7) ;
     color:#fff;
     font-size: 18px;
@@ -837,6 +864,7 @@ textarea{
     line-height:40px;
     text-align: center;
     padding-left: 10px;
+
     @include mq(md){
         flex:0 1 100%;
     }
@@ -866,6 +894,7 @@ textarea{
  .contact-item-input{   
     @include mq(sm){
      margin-top: 3px;
+     margin-left: 0px;
     }
     
     @include mq(md){
