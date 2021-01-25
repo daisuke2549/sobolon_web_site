@@ -87,6 +87,21 @@ img{
      right:3px;
     } 
 }
+.drawer-toggle{
+    @include mq(md){
+    display: none;
+    }
+
+    .drawer-hamburger-hamburger::before,
+    &::after{
+            background-color:$primary-color;
+    }
+
+
+}
+.drawer-hamburger-icon button{
+    background-color:$primary-color;
+}
 
 
 
@@ -101,11 +116,20 @@ img{
     
     .drawer-hamburger-icon
 
-    &::before,
+    &::before{
+        background-color:$primary-color;
+    }
     &::after{
             background-color:$primary-color;
     }
 }
+.drawer-hamburger-icon::before {
+    background-color: #3EA1D1;
+  }
+  
+  .drawer-hamburger-icon::after {
+    background-color: #3EA1D1;
+  }
 
 
 .header-inner{
@@ -187,7 +211,7 @@ img{
 }
 
 .footer-nav-list{
-
+    margin:auto;
     top: 38px;
     position: relative;
     margin-top: 8px;
@@ -224,6 +248,7 @@ img{
       }  
       @include mq(sm){
         margin-top: 8px;
+        margin-right: 40px;
       }
 }
 .footer-sns-list{
@@ -231,6 +256,7 @@ img{
     justify-content: center;
     margin-top: 8px;
     top: 38px;
+    margin-right: 20px;
     position: relative;
 }
 
@@ -255,6 +281,7 @@ img{
       }  
       @include mq(sm){
         margin-left: 32px;
+        margin-right: 40px;
     }
 }
 .footer-copyright{
@@ -266,7 +293,9 @@ img{
     }
     
 }
-
+.footer-copyright:hover {
+    color: #FF0000;
+  }
 
 
 
@@ -438,6 +467,8 @@ img{
 .feature-list{
     @include mq(sm){
          margin-top: 46px;
+         margin:auto ;
+         margin-right: 30px;
     } 
 
     @include mq(md){
@@ -492,6 +523,7 @@ img{
 /* about
 ----------------------------------------------------*/
 .about{
+   margin-left:0px;
    color:#fff;
     padding:120px 0;
     @include mq(sm){
@@ -560,9 +592,12 @@ img{
     @include mq(md){
         display:flex;
         justify-content: space-between;
+        margin-top: 40px;
+        
     }
     & + &{
      margin-top: 40px;
+     margin-left: 15px;
     }
 }
 .products-item-link{
@@ -585,6 +620,13 @@ img{
     }
 
 }
+.products-list {
+    @include mq(sm){
+    margin-top: 48px;
+    margin-right: 40px;
+    }
+  }
+
 
 
 .products-item-body{
@@ -706,6 +748,11 @@ img{
         flex-direction: row-reverse;
     }
     margin-top:64px;
+    @include mq(sm){
+    
+        margin-left:20px;
+    }
+
 
 }
 .concept2-picture{
@@ -767,7 +814,7 @@ img{
   
 
 textarea{
-    width:100%;
+    width: 310px;
     border:0;
     font-size: 16px;
     padding: 2em .5em;
@@ -776,7 +823,7 @@ textarea{
 input[type="text"],
 input[type="email"]{
     height:40px;
-    width:100%;
+    width: 310px;
     border:0;
 }
 textarea{
