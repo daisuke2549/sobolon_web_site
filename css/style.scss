@@ -249,7 +249,7 @@ img{
       }  
       @include mq(sm){
         margin-top: 0px;
-        margin-right: 40px;
+        margin-right: 0px;
       }
 }
 #privacy_policy_footer{
@@ -476,7 +476,7 @@ img{
     @include mq(sm){
          margin-top: 46px;
 
-         margin-right: 10px;
+         margin-right: 0px;
     } 
 
     @include mq(md){
@@ -516,9 +516,10 @@ img{
 
 .feature-item-picture{
     overflow: hidden;
-    > img{
+    img{
         transition: transform .4s;
     }
+
 
 }
 
@@ -603,7 +604,7 @@ img{
         margin-top: 40px;
         
     }
-    & + &{
+    @include mq(sm){
      margin-top: 40px;
      margin-left: 15px;
     }
@@ -616,15 +617,19 @@ img{
     &:hover{
        .product-item-picture > img{
           transform: scale(1.05);
+
        }
     }
 }
 }
 
+
 .products-item-picture{
     overflow: hidden;
     > img{
         transition: transform .4s;
+        width:200px;
+        margin:auto;
     }
 
 }
