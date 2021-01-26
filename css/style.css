@@ -566,6 +566,7 @@ img {
 @media screen and (min-width: 768px) {
   .about {
     background: url(../img/bg.png) center center/cover;
+    width: 100%;
   }
 }
 
@@ -622,11 +623,13 @@ img {
 
 .products-list {
   margin-top: 64px;
+  margin-left: 50px;
 }
 
 @media screen and (max-width: 767px) {
   .products-list {
     margin-top: 48px;
+    margin-left: 10px;
   }
 }
 

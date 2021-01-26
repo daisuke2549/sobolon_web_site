@@ -541,6 +541,7 @@ img{
     
     @include mq(md){
         background: url(../img/bg.png) center center / cover;
+        width:100%;
 
     }
 
@@ -557,6 +558,7 @@ img{
 }
 .about-inner{
    position: relative;   
+
 }
 
 .about-title{
@@ -587,8 +589,10 @@ img{
 }
 .products-list{
     margin-top: 64px;
+    margin-left: 50px;
     @include mq(sm){
      margin-top: 48px;
+     margin-left: 10px;
     }
     
 
