@@ -226,6 +226,7 @@ img{
     
 }
 
+
 .footer-nav-item-link{
    font-size: 12px;
    color: $font-color;
@@ -247,10 +248,17 @@ img{
         margin-left: 32px;
       }  
       @include mq(sm){
-        margin-top: 8px;
+        margin-top: 0px;
         margin-right: 40px;
       }
 }
+#privacy_policy_footer{
+    @include mq(sm){
+        margin-right: 32px;
+      }
+}
+
+
 .footer-sns-list{
     display: flex;
     justify-content: center;
@@ -467,8 +475,8 @@ img{
 .feature-list{
     @include mq(sm){
          margin-top: 46px;
-         margin:auto ;
-         margin-right: 30px;
+
+         margin-right: 10px;
     } 
 
     @include mq(md){
@@ -523,7 +531,6 @@ img{
 /* about
 ----------------------------------------------------*/
 .about{
-   margin-left:0px;
    color:#fff;
     padding:120px 0;
     @include mq(sm){
@@ -533,6 +540,7 @@ img{
     
     @include mq(md){
         background: url(../img/bg.png) center center / cover;
+
     }
 
    &::before{
@@ -623,7 +631,6 @@ img{
 .products-list {
     @include mq(sm){
     margin-top: 48px;
-    margin-right: 40px;
     }
   }
 
@@ -749,8 +756,6 @@ img{
     }
     margin-top:64px;
     @include mq(sm){
-    
-        margin-left:20px;
     }
 
 
@@ -817,14 +822,26 @@ textarea{
     width: 310px;
     border:0;
     font-size: 16px;
-    padding: 2em .5em;
+
     box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+    @include mq(sm){
+        width:250px;   
+        position: relative;
+        left:41px;    
+        }
+
 }
 input[type="text"],
 input[type="email"]{
+
     height:40px;
     width: 310px;
     border:0;
+    @include mq(sm){
+    width:250px;    
+    position: relative;
+    left:41px;
+    }
 }
 textarea{
     min-height:122px;
@@ -837,6 +854,7 @@ textarea{
     margin-top: 56px;
     @include mq(sm){
     margin-top: 26px;
+    margin:auto;
     }
 }
 
@@ -905,6 +923,7 @@ textarea{
        line-height: 32px;
        height: 32px;
        padding:0 16px;
+       margin-right: 100px;
     }
     
 }
@@ -912,7 +931,9 @@ textarea{
  
  .contact-item-input{   
     @include mq(sm){
-     margin-top: 3px;
+      position: relative;
+      padding-top: 0.3rem;
+      right:41px;
     }
     
     @include mq(md){
@@ -927,6 +948,11 @@ textarea{
     border: solid 1px #fff;
     border-radius: 1px;
     box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+    @include mq(sm){
+        position: relative;
+        left:41px;   
+    }
+
 }
 
 .contact-radio{

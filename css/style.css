@@ -237,8 +237,14 @@ img {
 
 @media screen and (max-width: 767px) {
   .footer-nav-item {
-    margin-top: 8px;
+    margin-top: 0px;
     margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #privacy_policy_footer {
+    margin-right: 32px;
   }
 }
 
@@ -489,8 +495,7 @@ img {
 @media screen and (max-width: 767px) {
   .feature-list {
     margin-top: 46px;
-    margin: auto;
-    margin-right: 30px;
+    margin-right: 10px;
   }
 }
 
@@ -547,7 +552,6 @@ img {
 /* about
 ----------------------------------------------------*/
 .about {
-  margin-left: 0px;
   color: #fff;
   padding: 120px 0;
 }
@@ -669,7 +673,6 @@ img {
 @media screen and (max-width: 767px) {
   .products-list {
     margin-top: 48px;
-    margin-right: 40px;
   }
 }
 
@@ -802,12 +805,6 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .concept2-inner {
-    margin-left: 20px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .concept2-picture {
     flex: 0 0 50%;
@@ -873,8 +870,15 @@ textarea {
   width: 310px;
   border: 0;
   font-size: 16px;
-  padding: 2em .5em;
   box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+}
+
+@media screen and (max-width: 767px) {
+  textarea {
+    width: 250px;
+    position: relative;
+    left: 41px;
+  }
 }
 
 input[type="text"],
@@ -882,6 +886,15 @@ input[type="email"] {
   height: 40px;
   width: 310px;
   border: 0;
+}
+
+@media screen and (max-width: 767px) {
+  input[type="text"],
+input[type="email"] {
+    width: 250px;
+    position: relative;
+    left: 41px;
+  }
 }
 
 textarea {
@@ -896,6 +909,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .contact-form {
     margin-top: 26px;
+    margin: auto;
   }
 }
 
@@ -974,12 +988,15 @@ textarea {
     line-height: 32px;
     height: 32px;
     padding: 0 16px;
+    margin-right: 100px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .contact-item-input {
-    margin-top: 3px;
+    position: relative;
+    padding-top: 0.3rem;
+    right: 41px;
   }
 }
 
@@ -995,6 +1012,13 @@ textarea {
   border: solid 1px #fff;
   border-radius: 1px;
   box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+}
+
+@media screen and (max-width: 767px) {
+  .contact-radio-wrap {
+    position: relative;
+    left: 41px;
+  }
 }
 
 .contact-radio {
